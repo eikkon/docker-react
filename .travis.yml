@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t eikkon/docker-react -f Dockerfile.dev .
+
+script:
+  - dockier run -e CI=true  eikkon/docker-react nom run test
