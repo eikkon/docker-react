@@ -7,3 +7,4 @@ before_install:
 
 script:
   - dockier run -e CI=true  eikkon/docker-react nom run test
+  
